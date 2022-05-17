@@ -4,18 +4,27 @@ class Pet
     private $_name;
     private $_color;
 
+    //Java: public Pet()
+    //in JS
+    function __construct()
+    {
+        $this->_name = "Tara";
+        $this->_color = "silver";
+
+    }
+
     function eat()
     {
-        echo "Pet is eating <br>";
+        echo $this->_name . " is eating <br>";
     }
 
     function sleep()
     {
-        echo "Pet is sleeping <br>";
+        echo $this->_name . " is sleeping <br>";
     }
 
     function talk() {
-        echo "Pet is talking <br>";
+        echo $this->_name . " is talking <br>";
     }
 
 }
