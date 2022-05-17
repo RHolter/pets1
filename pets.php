@@ -5,11 +5,12 @@ class Pet
     private $_color;
 
     //Java: public Pet()
-    //in JS
-    function __construct()
+    // any parameter($color) with a default value is optional
+    // any parameter($name) without oa default is required
+    function __construct($name, $color="?")
     {
-        $this->_name = "Tara";
-        $this->_color = "silver";
+        $this->_name = $name;
+        $this->_color = $color;
 
     }
 
@@ -23,8 +24,31 @@ class Pet
         echo $this->_name . " is sleeping <br>";
     }
 
-    function talk() {
+    function talk()
+    {
         echo $this->_name . " is talking <br>";
     }
+
+    function getName()
+    {
+        return $this->_name;
+    }
+
+    function setName($name)
+    {
+        $this->_name = $name;
+    }
+
+    function getColor()
+    {
+        return $this->_color;
+    }
+
+    function setColor($color){
+        $this->_color =$color;
+    }
+
+
+
 
 }
